@@ -1,5 +1,14 @@
 streamlit
+streamlit
 pandas
 numpy
-joblib
+matplotlib
+seaborn
 scikit-learn
+shap
+xgboost
+plotly
+Pillow
+streamlit-shap
+statsmodels
+joblib
