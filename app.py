@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib # joblib installed
+import joblib 
 
 # Load the saved model, scaler, and label encoder
 try:
