@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
+from sklearn.exceptions import NotFittedError
 
 # Load the saved model, scaler, and label encoder
 try:
@@ -52,6 +53,19 @@ st.write(user_input_df)
 # Add a button to trigger prediction
 predict_button = st.button("Predict Risk Level")
 
+
+if predict_button:
+    try:
+        user_input_scaled = scaler.transform(user_input_df)
+        prediction = model.predict(user_input_scaled)
+        decoded_prediction = label_encoder.inverse_transform(prediction)[0]
+        # ... display code as before ...
+    except NotFittedError:
+        st.error("One of the model components (scaler/model/encoder) is not fitted. Please retrain and save the components properly.")
+    except Exception as e:
+        st.error(f"An error occurred during prediction: {e}")
+
+        
 # Check if the predict button is clicked
 if predict_button:
     # Apply the loaded scaler to the user input DataFrame
