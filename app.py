@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-import pandas as pd
 
 # Load the saved model, scaler, and label encoder
 try:
@@ -22,7 +21,6 @@ st.write("Application is ready to predict maternal health risk.")
 st.header("Enter Patient Details")
 
 # Input widgets for numerical features
-
 # Example hardcoded values (adjust as appropriate)
 age = st.number_input("Enter Age:", min_value=15, max_value=50, value=30)
 systolic_bp = st.number_input("Enter Systolic Blood Pressure:", min_value=80, max_value=200, value=120)
