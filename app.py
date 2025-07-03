@@ -1,5 +1,6 @@
 import streamlit as st
 import joblib
+import pandas as pd
 
 # Load the saved model, scaler, and label encoder
 try:
