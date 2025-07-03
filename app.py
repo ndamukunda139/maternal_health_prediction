@@ -28,7 +28,7 @@ age = st.number_input("Enter Age:", min_value=15, max_value=50, value=30)
 systolic_bp = st.number_input("Enter Systolic Blood Pressure:", min_value=80, max_value=200, value=120)
 diastolic_bp = st.number_input("Enter Diastolic Blood Pressure:", min_value=50, max_value=130, value=80)
 bs = st.number_input("Enter Blood Sugar (BS):", min_value=2.0, max_value=20.0, value=5.5, format="%.2f")
-body_temp = st.number_input("Enter Body Temperature:", min_value=35.0, max_value=42.0, value=37.0, format="%.1f")
+body_temp = st.number_input("Enter Body Temperature:", min_value=95.0, max_value=105.0, value=98.0, format="%.1f")
 heart_rate = st.number_input("Enter Heart Rate:", min_value=40, max_value=180, value=75)
 
 # You can add a button to trigger prediction in the next step
